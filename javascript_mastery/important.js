@@ -7,4 +7,16 @@ function sum( a,b,c,d,e,f,g,h){
 
 let b=sum(...arr,...arr2);
 
-console.log(b);
+// console.log(b);
+
+let obj={
+    name:'aditya',
+    age:21,
+}
+let obj2={
+    ...obj,
+    city:'bbsr',
+    country:'india',
+}
+let {city,country}=obj2;
+console.log(city,country);
