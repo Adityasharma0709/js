@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id='Container'></div>
+    <script>  
+   const buttonLabels = ["Click Me", "Submit", "Cancel", "Reset"];
+const container = document.getElementById('Container');
+
+buttonLabels.forEach((label) => {
+
+  const btn = document.createElement('button');
+  btn.textContent = label;
+btn.addEventListener('click',()=>{
+    alert("button is clicked");
+})
+  
+  container.appendChild(btn);
+ 
+});
+function armv(){
+    alert("button is clicked")
+}
+    </script>
+</body>
+</html>

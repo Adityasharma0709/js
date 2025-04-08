@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Buttons from Object</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      button {
+        margin: 5px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Buttons Created from Object</h2>
+    <!-- Container to display the buttons -->
+    <div id="buttonContainer"></div>
+  
+    <script>
+      // Define an object with keys as identifiers and labels as values for the buttons.
+      const buttonLabels = {
+        btn1: "Click Me",
+        btn2: "Submit",
+        btn3: "Cancel",
+        btn4: "Reset"
+      };
+  
+      // Get the container element where the buttons will be appended.
+      const container = document.getElementById('buttonContainer');
+  
+      // Create and append buttons using the keys from the object.
+      Object.keys(buttonLabels).forEach((key, index) => {
+        // Create a button element.
+        const btn = document.createElement('button');
+        btn.textContent = buttonLabels[key];
+  
+        // Optional: Add an event listener for click events.
+        btn.addEventListener('click', () => {
+          alert(`Button ${index + 1} (${buttonLabels[key]}) clicked!`);
+        });
+  
+        // Append the button to the container.
+        container.appendChild(btn);
+      });
+    </script>
+  </body>
+  </html>
